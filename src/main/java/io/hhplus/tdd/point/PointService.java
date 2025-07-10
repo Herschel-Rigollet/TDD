@@ -3,13 +3,11 @@ package io.hhplus.tdd.point;
 import io.hhplus.tdd.database.PointHistoryTable;
 import io.hhplus.tdd.database.UserPointTable;
 
+import java.util.List;
+
 public class PointService {
     private final UserPointTable userPointTable;
     private final PointHistoryTable pointHistoryTable;
-
-//    public PointService(UserPointTable userPointTable) {
-//        this.userPointTable = userPointTable;
-//    }
 
     public PointService(UserPointTable userPointTable, PointHistoryTable pointHistoryTable) {
         this.userPointTable = userPointTable;
@@ -17,8 +15,7 @@ public class PointService {
     }
 
     public long getPoint(long userId) {
-        UserPoint userPoint = userPointTable.selectById(userId);
-        return userPoint.point();
+        return userPointTable.selectById(userId).point();
     }
 
     public void charge(long userId, long amount) {
@@ -40,5 +37,9 @@ public class PointService {
         long newPoint = current.point() - amount;
         userPointTable.insertOrUpdate(userId, newPoint);
         pointHistoryTable.insert(userId, amount, TransactionType.USE, System.currentTimeMillis());
+    }
+
+    public List<PointHistory> getHistories(long userId) {
+        return pointHistoryTable.selectAllByUserId(userId);
     }
 }
