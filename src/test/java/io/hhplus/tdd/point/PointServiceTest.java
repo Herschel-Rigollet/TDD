@@ -61,4 +61,21 @@ public class PointServiceTest {
         // When Then
         assertThrows(IllegalArgumentException.class, () -> service.getPoint(-1L));
     }
+
+    @Test
+    void 정상_충전() {
+        // Given
+        long userId = 1L;
+        UserPointTable table = new UserPointTable();
+        table.insertOrUpdate(userId, 5000);
+
+        PointService service = new PointService(table);
+
+        // When
+        service.charge(userId, 3000); // 5000 + 3000 = 8000
+
+        // Then
+        long result = service.getPoint(userId);
+        assertEquals(8000, result);
+    }
 }

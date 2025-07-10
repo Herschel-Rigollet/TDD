@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff8865d3-b85f-4079-9cf0-0bcfcb9034af" name="Changes" comment="PointService 추가 및 userId를 받아 현재 보유 중인 포인트를 조회하는 기능 구현">
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/hhplus/tdd/point/PointServiceTest.java" afterDir="false" />
+    <list default="true" id="ff8865d3-b85f-4079-9cf0-0bcfcb9034af" name="Changes" comment="PointServiceTest 생성 및 포인트 조회 테스트 코드 작성">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/hhplus/tdd/point/PointServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/hhplus/tdd/point/PointServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,65 +91,66 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build hhplus-tdd-jvm.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.PointServiceTest.chargePoint.executor": "Run",
-    "Gradle.PointServiceTest.getPoint.executor": "Run",
-    "Gradle.PointServiceTest.포인트_조회.executor": "Run",
-    "Gradle.hhplus-tdd-java 빌드.executor": "Run",
-    "Gradle.소스 다운로드.executor": "Run",
-    "JUnit.PointServiceTest.chargePoint.executor": "Run",
-    "JUnit.PointServiceTest.getPoint.executor": "Run",
-    "JUnit.PointServiceTest.매우_큰_금액_충전.executor": "Run",
-    "JUnit.PointServiceTest.여러_번_연속_충전.executor": "Run",
-    "JUnit.PointServiceTest.여러_번_충전_시_내역_저장.executor": "Run",
-    "JUnit.PointServiceTest.여러_사용자_충전_시_내역_저장.executor": "Run",
-    "JUnit.PointServiceTest.음수_충전_시_내역_저장.executor": "Run",
-    "JUnit.PointServiceTest.음수_포인트_충전_시도.executor": "Run",
-    "JUnit.PointServiceTest.음수_혹은_0_포인트_사용.executor": "Run",
-    "JUnit.PointServiceTest.음수_혹은_0_포인트_사용_시_내역_저장_및_예외.executor": "Run",
-    "JUnit.PointServiceTest.잔고_부족.executor": "Run",
-    "JUnit.PointServiceTest.잘못된_ID.executor": "Run",
-    "JUnit.PointServiceTest.존재하지_않는_사용자_조회.executor": "Run",
-    "JUnit.PointServiceTest.존재하지_않는_사용자_충전.executor": "Run",
-    "JUnit.PointServiceTest.최대값_충전_시_내역_저장.executor": "Run",
-    "JUnit.PointServiceTest.포인트_0_충전.executor": "Run",
-    "JUnit.PointServiceTest.포인트_0_충전_시_내역_저장.executor": "Run",
-    "JUnit.PointServiceTest.포인트_사용.executor": "Run",
-    "JUnit.PointServiceTest.포인트_사용_및_내역_저장.executor": "Run",
-    "JUnit.PointServiceTest.포인트_충전_시_내역_저장.executor": "Run",
-    "JUnit.PointServiceTest.포인트가_0인_사용자_조회.executor": "Run",
-    "JUnit.PointServiceTest.포인트가_0일_때_첫충전.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.TddApplication.executor": "Run",
-    "aspect.path.notification.shown": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feat",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/rigollet/Desktop/hhplus/hhplus-tdd-java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "프로젝트",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.language.and.region",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build hhplus-tdd-jvm.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PointServiceTest.chargePoint.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PointServiceTest.getPoint.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PointServiceTest.포인트_조회.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.hhplus-tdd-java 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.chargePoint.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.getPoint.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.매우_큰_금액_충전.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.여러_번_연속_충전.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.여러_번_충전_시_내역_저장.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.여러_사용자_충전_시_내역_저장.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.음수_충전_시_내역_저장.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.음수_포인트_충전_시도.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.음수_혹은_0_포인트_사용.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.음수_혹은_0_포인트_사용_시_내역_저장_및_예외.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.잔고_부족.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.잘못된_ID.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.정상_충전.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.존재하지_않는_사용자_조회.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.존재하지_않는_사용자_충전.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.최대값_충전_시_내역_저장.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.포인트_0_충전.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.포인트_0_충전_시_내역_저장.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.포인트_사용.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.포인트_사용_및_내역_저장.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.포인트_충전_시_내역_저장.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.포인트가_0인_사용자_조회.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointServiceTest.포인트가_0일_때_첫충전.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TddApplication.executor&quot;: &quot;Run&quot;,
+    &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rigollet/Desktop/hhplus/hhplus-tdd-java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -163,7 +165,7 @@
       <recent name="io.hhplus.tdd.point" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PointServiceTest.getPoint">
+  <component name="RunManager" selected="Gradle.PointServiceTest.포인트_조회">
     <configuration name="PointServiceTest.포인트_조회" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -178,30 +180,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;io.hhplus.tdd.point.PointServiceTest.포인트_조회&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PointServiceTest.getPoint" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;io.hhplus.tdd.point.PointServiceTest.getPoint&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -260,6 +238,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PointServiceTest.정상_충전" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hhplus-tdd-jvm.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.hhplus.tdd.point.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.hhplus.tdd.point" />
+      <option name="MAIN_CLASS_NAME" value="io.hhplus.tdd.point.PointServiceTest" />
+      <option name="METHOD_NAME" value="정상_충전" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PointServiceTest.존재하지_않는_사용자_충전" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hhplus-tdd-jvm.test" />
       <extension name="coverage">
@@ -285,11 +279,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PointServiceTest.포인트_조회" />
         <item itemvalue="JUnit.PointServiceTest.잔고_부족" />
         <item itemvalue="JUnit.PointServiceTest.음수_혹은_0_포인트_사용_시_내역_저장_및_예외" />
         <item itemvalue="JUnit.PointServiceTest.여러_번_연속_충전" />
-        <item itemvalue="Gradle.PointServiceTest.포인트_조회" />
-        <item itemvalue="Gradle.PointServiceTest.getPoint" />
       </list>
     </recent_temporary>
   </component>
@@ -386,7 +379,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752154675404</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="PointServiceTest 생성 및 포인트 조회 테스트 코드 작성">
+      <option name="closed" value="true" />
+      <created>1752155531248</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1752155531248</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +426,8 @@
     <MESSAGE value="PointController 구현 및 리턴 타입에 맞춰 PointService 수정" />
     <MESSAGE value="프로젝트 세팅" />
     <MESSAGE value="PointService 추가 및 userId를 받아 현재 보유 중인 포인트를 조회하는 기능 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="PointService 추가 및 userId를 받아 현재 보유 중인 포인트를 조회하는 기능 구현" />
+    <MESSAGE value="PointServiceTest 생성 및 포인트 조회 테스트 코드 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="PointServiceTest 생성 및 포인트 조회 테스트 코드 작성" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
